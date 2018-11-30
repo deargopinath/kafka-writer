@@ -1,0 +1,9 @@
+echo Stopping Kafka ...
+wmic process where (commandline like "%%kafka.Kafka%%" and not name="wmic.exe") delete
+
+echo Stopping Zookeeper ...
+wmic process where (commandline like "%%zookeeper%%" and not name="wmic.exe") delete
+
+echo Deleting old log files...
+rmdir /s /q C:\zookeeper\logs
+rmdir /s /q C:\confluent41\kafka-logs
