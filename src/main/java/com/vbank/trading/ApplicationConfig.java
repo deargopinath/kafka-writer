@@ -1,5 +1,4 @@
 package com.vbank.trading;
-
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.kafka.clients.producer.ProducerConfig;
